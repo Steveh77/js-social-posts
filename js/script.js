@@ -24,6 +24,40 @@
 
 
 
+// # Milestone 1
+const arrayPost = [
+    {   id : 1 , 
+        nomeAutore : "Phil Mangione", 
+        fotoAutore : "https://unsplash.it/300/300?image=15",
+        data : "03-06-2022",    
+        testo : "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sintvoluptate recusandae architecto. Et nihil ullam aut alias.",
+        immaginePost : "https://unsplash.it/600/300?image=171",
+        likes : 80,
+    },
+    {   id : 2 , 
+        nomeAutore : "Pinco Pallo", 
+        fotoAutore : "https://picsum.photos/200",
+        data : "03-06-2022",    
+        testo : "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sintvoluptate recusandae architecto. Et nihil ullam aut alias.",
+        immaginePost : "https://unsplash.it/600/300?image=171",
+        likes : 40,
+    },
+    {   id : 3 , 
+        nomeAutore : "Mariangiangiangela", 
+        fotoAutore : "https://unsplash.it/300/300?image=15",
+        data : "03-06-2022",    
+        testo : "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sintvoluptate recusandae architecto. Et nihil ullam aut alias.",
+        immaginePost : "https://unsplash.it/600/300?image=171",
+        likes : 99,
+    }
+
+]
+
+console.log(arrayPost)
+
+
+// #Milestone 2
+// Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i post del nostro feed.
 
 
 
