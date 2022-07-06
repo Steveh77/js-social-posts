@@ -123,3 +123,10 @@ h1 {
     color: #0CD977;
     cursor: default;
 }
+a{
+    cursor: pointer;
+}
+.clicked{
+    color: #0CD977;
+    cursor: pointer;
+}

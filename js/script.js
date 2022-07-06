@@ -27,7 +27,7 @@
 // # Milestone 1
 const arrayPost = [
     {   id : 1 , 
-        nomeAutore : "Pieroh Mangione", 
+        nomeAutore : "Piero Mangione", 
         fotoAutore : "https://unsplash.it/300/300?image=15",
         data : "03-06-2022",    
         testo : "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sintvoluptate recusandae architecto. Et nihil ullam aut alias.",
@@ -37,15 +37,15 @@ const arrayPost = [
     {   id : 2 , 
         nomeAutore : "Pinco Pallo", 
         fotoAutore : "https://picsum.photos/200",
-        data : "03-06-2022",    
+        data : "01-04-2022",    
         testo : "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sintvoluptate recusandae architecto. Et nihil ullam aut alias.",
         immaginePost : "https://unsplash.it/600/300?image=171",
         likes : 40,
     },
     {   id : 3 , 
         nomeAutore : "Mariangiangiangela", 
-        fotoAutore : "https://unsplash.it/300/300?image=15",
-        data : "03-06-2022",    
+        fotoAutore : "https://picsum.photos/201",
+        data : "02-05-2022",    
         testo : "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sintvoluptate recusandae architecto. Et nihil ullam aut alias.",
         immaginePost : "https://unsplash.it/600/300?image=175",
         likes : 9999,
@@ -87,7 +87,7 @@ for (let i = 0; i < arrayPost.length; i++) {
     <div class="post__footer">
       <div class="likes js-likes">
         <div class="likes__cta">
-          <a class="like-button js-like-button" href="#" data-postid="1">
+          <a class="like-button js-like-button" >
             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
             <span class="like-button__label">Mi Piace</span>
           </a>
@@ -95,10 +95,28 @@ for (let i = 0; i < arrayPost.length; i++) {
         <div class="likes__counter">Piace a <b id="like-counter-1" class="js-likes-counter">${element['likes']}</b> persone</div>
       </div>
     </div>
-  </div>`
+  </div>`;
+
+  
 }
-console.log(post)
+// console.log(post)
 container.innerHTML = post
+
+// #Milestone 3
+// Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo.
+
+let posts = document.querySelectorAll(".post")
+console.log(posts)
+for (const item of posts) {
+    let likeBtn = item.querySelector('.js-like-button')
+
+    likeBtn.addEventListener("click", function() {
+        likeBtn.classList.add("clicked")
+
+    })
+}
+
+
 
 
 
