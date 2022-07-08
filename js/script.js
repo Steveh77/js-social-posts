@@ -82,17 +82,17 @@ for (let i = 0; i < arrayPost.length; i++) {
     ${element['testo']}
     </div>
     <div class="post__image">
-      <img src="${element['immaginePost']}" alt="" />
+      <img src="${element['immaginePost']}" alt="image-post-${element['id']}" />
     </div>
     <div class="post__footer">
       <div class="likes js-likes">
         <div class="likes__cta">
-          <a class="like-button js-like-button" >
+          <a class="like-button js-like-button" data-postid="${element['id']}" >
             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
             <span class="like-button__label">Mi Piace</span>
           </a>
         </div>
-        <div class="likes__counter">Piace a <b id="like-counter-1" class="js-likes-counter">${element['likes']}</b> persone</div>
+        <div class="likes__counter">Piace a <b id="like-counter-${element['id']}" class="js-likes-counter">${element['likes']}</b> persone</div>
       </div>
     </div>
   </div>`;
@@ -108,10 +108,18 @@ container.innerHTML = post
 let posts = document.querySelectorAll(".post")
 console.log(posts)
 for (const item of posts) {
-    let likeBtn = item.querySelector('.js-like-button')
+    const likeBtn = item.querySelector('.js-like-button')
 
     likeBtn.addEventListener("click", function() {
         likeBtn.classList.add("clicked")
+        // recupero l'id del post
+        const postId = likeBtn.dataset.postid
+        // recupero il contatore grazie all'id del post
+        const likeCounter = document.getElementById(`like-counter-${postId}`);
+        // recupero i likes
+        let likes = parseInt(likeCounter.innerText);
+        
+        likeCounter.innerText = ++likes;
 
     })
 }
